@@ -22,18 +22,28 @@
       width: 100%;
       height: 100%;
       overflow: hidden;
+      background-color: transparent; /* Membuat latar belakang transparan */
       background-image: url('./dym.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .profile {
+      width: 150px; /* Mengatur ukuran lingkaran */
+      height: 150px; /* Mengatur ukuran lingkaran */
+      border-radius: 50%; /* Membuat lingkaran */
+      overflow: hidden;
       position: relative;
+    }
+
+    .profile img {
       width: 100%;
       height: 100%;
-      overflow: hidden;
-      border-radius: 50%; /* Mengubah bentuk latar belakang menjadi lingkaran */
+      object-fit: cover;
     }
 
     iframe {
@@ -49,6 +59,7 @@
 
 <body>
   <div class="profile">
+    <img src="./dym.png" alt="Profile Image">
     <iframe
       id="fullscreen-iframe"
       src="https://embed.ipfscdn.io/ipfs/bafybeicd3qfzelz4su7ng6n523virdsgobrc5pcbarhwqv3dj3drh645pi/?contract=0xE72C8D57740B1a4d5cE2979Ca846788463637a6E&chain=%7B%22name%22%3A%22sychonix%22%2C%22chain%22%3A%22%22%2C%22rpc%22%3A%5B%22https%3A%2F%2Ffroopyland.dymension.xyz%2F23%2Fsychonix_4126408-1-a%2Fevmrpc%22%5D%2C%22nativeCurrency%22%3A%7B%22symbol%22%3A%22SYNX%22%2C%22name%22%3A%22SYNX%22%2C%22decimals%22%3A18%7D%2C%22shortName%22%3A%22sychonix%22%2C%22chainId%22%3A4126408%2C%22testnet%22%3Afalse%2C%22slug%22%3A%22sychonix%22%7D&clientId=26f3664eff80a6145cf43643e30f0962&theme=dark&primaryColor=cyan"
