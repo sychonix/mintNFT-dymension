@@ -42,13 +42,32 @@
       height: 100%;
       border: none;
     }
+
+    /* Style for the Get SYNX box */
+    .get-synx-box {
+      position: absolute;
+      top: 30px;
+      left: 10px;
+      z-index: 9998;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .get-synx-text {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 5px;
+    }
   </style>
 </head>
 
 <body>
   <div class="profile">
-    <div style="position: absolute; top: 10px; left: 10px; z-index: 9998; background-color: rgba(0, 0, 0, 0.5); padding: 5px;">
-      <a href="https://faucet.sychonix.me/" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; font-weight: bold; font-size: 18px;">Get SYNX</a>
+    <div class="get-synx-box">
+      <a href="https://faucet.sychonix.me/" target="_blank" rel="noopener noreferrer" class="get-synx-text">Get SYNX</a>
     </div>
     <iframe
       id="fullscreen-iframe"
