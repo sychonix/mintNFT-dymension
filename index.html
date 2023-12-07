@@ -46,17 +46,23 @@
 
 <body>
   <div class="profile">
-    <iframe
-      id="fullscreen-iframe"
-      src="https://embed.ipfscdn.io/ipfs/bafybeicd3qfzelz4su7ng6n523virdsgobrc5pcbarhwqv3dj3drh645pi/?contract=0xE72C8D57740B1a4d5cE2979Ca846788463637a6E&chain=%7B%22name%22%3A%22sychonix%22%2C%22chain%22%3A%22%22%2C%22rpc%22%3A%5B%22https%3A%2F%2Ffroopyland.dymension.xyz%2F23%2Fsychonix_4126408-1-a%2Fevmrpc%22%5D%2C%22nativeCurrency%22%3A%7B%22symbol%22%3A%22SYNX%22%2C%22name%22%3A%22SYNX%22%2C%22decimals%22%3A18%7D%2C%22shortName%22%3A%22sychonix%22%2C%22chainId%22%3A4126408%2C%22testnet%22%3Afalse%2C%22slug%22%3A%22sychonix%22%7D&clientId=26f3664eff80a6145cf43643e30f0962&theme=dark&primaryColor=cyan"
-    ></iframe>
+  <div class="menu">
+    <button id="connect-wallet">Connect Wallet</button>
+    <a href="https://faucet.sychonix.me/" target="_blank" rel="noopener noreferrer">Faucet</a>
   </div>
+  <iframe
+    id="fullscreen-iframe"
+    src="https://embed.ipfscdn.io/ipfs/bafybeicd3qfzelz4su7ng6n523virdsgobrc5pcbarhwqv3dj3drh645pi/?contract=0xE72C8D57740B1a4d5cE2979Ca846788463637a6E&chain=%7B%22name%22%3A%22sychonix%22%2C%22chain%22%3A%22%22%2C%22rpc%22%3A%5B%22https%3A%2F%2Ffroopyland.dymension.xyz%2F23%2Fsychonix_4126408-1-a%2Fevmrpc%22%5D%2C%22nativeCurrency%22%3A%7B%22symbol%22%3A%22SYNX%22%2C%22name%22%3A%22SYNX%22%2C%22decimals%22%3A18%7D%2C%22shortName%22%3A%22sychonix%22%2C%22chainId%22%3A4126408%2C%22testnet%22%3Afalse%2C%22slug%22%3A%22sychonix%22%7D&clientId=26f3664eff80a6145cf43643e30f0962&theme=dark&primaryColor=cyan"
+  ></iframe>
+</div>
+
 
   <script>
     // Function to set the iframe height on load and window resize
     function setIframeHeight() {
-      const iframe = document.getElementById('fullscreen-iframe');
-      iframe.style.height = window.innerHeight + 'px';
+    const iframe = document.getElementById('fullscreen-iframe');
+    const menuHeight = document.querySelector('.menu').offsetHeight;
+    iframe.style.height = (window.innerHeight - menuHeight) + 'px';
     }
 
     // Call the function on initial load
